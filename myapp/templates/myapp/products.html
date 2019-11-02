@@ -1,0 +1,45 @@
+{%extends 'accounts/base.html'%}
+{%block content%}
+<div class='head'>
+  <center>
+<legend>Here is a List of Our Products.</legend>
+</center>
+</div>
+<div class="container">
+  <center>
+<div class='row'>
+{%for product in product%}
+<div class='col-md-4'>
+<div class='card'>
+  <center>
+    <a href="">
+<div class='item-image'>
+  <img src="{{product.image.url}}" width="330" height='370' alt='image'>
+  </div>
+  <br>
+  <div class='category'>
+
+    </div>
+  <strong>
+  <div class='item-name'>
+    {{product.title}}
+    </div>
+  <div class='item-price'>
+    $ {{product.price}}
+    </div>
+    </strong>
+    </a>
+    <div class='item-description'>
+      {{product.description}}
+      </div>
+      <a href="{%url 'myapp:cart' product.pk%}"><button class='btn btn-success' type=>Add Cart</button></a>
+      </center>
+      </div>
+      <br>
+      </div>
+
+{%endfor%}
+</div>
+</center>
+</div>
+{%endblock%}

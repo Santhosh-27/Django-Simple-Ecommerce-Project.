@@ -1,0 +1,25 @@
+{%extends 'accounts/base.html'%}
+{%block content%}
+<center>Strong</center>
+<br>
+<div class="container">
+<table class="table">
+<thead>
+  <tr>
+    <th>Product</th>
+      <th>Quantity</th>
+        <th>Total</th>
+    </tr>
+  </thead>
+  {%for order in order%}
+  <tbody>
+    <tr>
+      <td>{{order.item.title}}</td>
+      <td>{{order.quantity}}</td>
+        <td>{{order.get_total_price}}</td>
+      </tr>
+    </tbody>
+    {%endfor%}
+  </table>
+  </div>
+{%endblock%}

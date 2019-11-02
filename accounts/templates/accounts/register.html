@@ -1,0 +1,33 @@
+{%extends "accounts/base.html"%}
+{%load crispy_forms_tags%}
+{%block content%}
+<br>
+<div class='col-sm-8'>
+<form method="POST" enctype='multipart/form-data' action="">
+
+  <div class='card'>
+    <center>
+      <div class='col-sm-6'>
+    <legend>Join Today</legend>
+    <hr>
+    </div>
+    </center>
+
+    <div class="col-sm-8">
+{%csrf_token%}
+{{form|crispy}}
+<center>
+<button class='btn btn-success' type='submit'>Sign Up</button>
+</center>
+</div>
+<center>
+<div class='col-sm-10'>
+  <hr>
+  <small>Already Have An Account? <a href="{%url 'accounts:login'%}">Sign In</a></small>
+  </div>
+  </center>
+  <br>
+</div>
+  </form>
+  </div>
+{%endblock%}

@@ -1,0 +1,35 @@
+{%extends 'accounts/base.html'%}
+{%block content%}
+<div class='head'>
+  <center>
+<legend>{{user.username}},welcome to your cart.</legend>
+</center>
+</div>
+<div class="container">
+  <center>
+<div class='row'>
+<div class='col-md-3'>
+<div class='card'>
+  <center>
+
+<div class='item-image'>
+  <img src="{{item.image.url}}" width="245" height='300' alt='image'>
+  </div>
+  <br>
+  <strong>
+  <div class='item-name text=blue'>
+    {{item.title}}
+    </div>
+  <div class='item-price'>
+    $ {{item.price}}
+    </div>
+    </strong>
+    <div class='item-description'>
+      {{item.description}}
+      </div>
+      </center>
+      </div>
+      <br>
+      </div>
+
+{%endblock%}

@@ -1,0 +1,15 @@
+{%extends 'accounts/base.html'%}
+{%block content%}
+{%for obj in obj%}
+<div class='image'>
+<img class='rounded-circle' src="{{obj.image.url}}" width='150' height='150' alt='profile'>
+</div>
+<div class='user'>
+{{user.username}}
+</div>
+<div class='email'>
+  {{user.email}}
+  </div>
+  
+  {%endfor%}
+{%endblock%}
